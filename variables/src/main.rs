@@ -45,6 +45,38 @@ fn main() {
     );
 
     // Операторы - https://doc.rust-lang.ru/book/appendix-02-operators.html 
+
+    // Логические операторы 
+    let t = true;
+    let f: bool = false; // with explicit type annotation
+
+    // Символьный тип данных
+    let c = 'z';
+    let w = 'Z';
+    let heart_eyed_cat = '😻';
+
+    println!("{}, {}, {}", c, w, heart_eyed_cat);
+
+    // Кортежи
+    let tup = (500, 6.4, 1);
+    let (q, e, r) = tup;
+    println!("The value of y is: {}", e);
+    // or
+    let t = tup.0;
+    let u = tup.1;
+    let v = tup.2;
+    println!("The value of y is: {}", u);
+
+    // Массивы
+    let a = [1, 2, 3, 4, 5];
+    let first = a[0];
+    let second = a[1];
+    println!("The value of y is: {}", second);
+
+    let months = [
+        "January", "February", "March", "April", "May", "June", "July", "August", "September",
+    ]
+    
 }
 
 // const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3; константы только такая нотация и могут быть вычисляемыми - https://doc.rust-lang.ru/reference/const_eval.html
