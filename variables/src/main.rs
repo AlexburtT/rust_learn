@@ -50,6 +50,8 @@ fn main() {
     let t = true;
     let f: bool = false; // with explicit type annotation
 
+    println!("{}, {}", t, f);
+
     // Символьный тип данных
     let c = 'z';
     let w = 'Z';
@@ -60,23 +62,25 @@ fn main() {
     // Кортежи
     let tup = (500, 6.4, 1);
     let (q, e, r) = tup;
-    println!("The value of y is: {}", e);
+    println!("The value of y is: {}, {}, {}", e, q, r);
     // or
     let t = tup.0;
     let u = tup.1;
     let v = tup.2;
-    println!("The value of y is: {}", u);
+    println!("The value of y is: {}, {}, {}", u, v, t);
 
     // Массивы
     let a = [1, 2, 3, 4, 5];
     let first = a[0];
     let second = a[1];
-    println!("The value of y is: {}", second);
+    println!("The value of y is: {}, {}", second, first);
 
     let months = [
         "January", "February", "March", "April", "May", "June", "July", "August", "September",
-    ]
+    ];
     
+    let first_months: &str = months[0];
+    println!("The value of y is: {}", first_months);
 }
 
 // const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3; константы только такая нотация и могут быть вычисляемыми - https://doc.rust-lang.ru/reference/const_eval.html
